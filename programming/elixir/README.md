@@ -189,10 +189,13 @@ end
 3. `web/templates/comment/new.html.eex`
 >We’ll use the Phoenix form_for helper passing in our comment changeset and our action, which we’ll define in our routes later.
 ```eex
+<h2>Add Your Comment</h2>
 <%= form_for @comment_changeset, post_comment_path(@conn, :create, @post), fn f -> %>
-  <%= label f, :body, class: "control-label" %>
-  <%= text_input f, :body, class: "form-control" %>
-  <%= error_tag f, :body %>
+  <div class="form-group">
+    <%= label f, :body, class: "control-label" %>
+    <%= text_input f, :body, class: "form-control" %>
+    <%= error_tag f, :body %>
+  </div>
   <%= submit "Submit", class: "btn btn-primary" %>
 <% end %>
 ```
@@ -246,23 +249,29 @@ defmodule Teacher.PostController do
   alias Teacher.{Post, Comment}
   # ...
   def show(conn, %{"id" => id}) do
-    post = Post
-           |> Repo.get(id)
-           |> Repo.preload(:comments)
-    comment_changeset = Teacher.Comment.changeset(%Teacher.Comment{})
+    post =  Post
+            |> Repo.get(id)
+            |> Repo.preload(:comments)
+    comment_changeset = Comment.changeset(%Comment{})
     render(conn, "show.html", post: post, comment_changeset: comment_changeset)
   end
   # ...
 end
 ```
-finally, we can update our our show template to display the comments using an elixir comprehension
-9. `web/templates/post/show.html.eex`
-```eex
-<%= for comment <- @post.comments do %>
-  <%= comment.body %>
-<% end %>
-```
 
+9. `web/templates/post/show.html.eex`
+finally, we can update our our show template to display the comments using an elixir comprehension
+```eex
+<%= render Teacher.CommentView, "new.html",
+                                conn: @conn,
+                                post: @post,
+                                comment_changeset: @comment_changeset %>
+<ul>
+  <%= for comment <- @post.comments do %>
+    <li><%= comment.body %></li>
+  <% end %>
+</ul>
+```
 
 #### *Docs & Links*
 1. [Episode Source Code](https://github.com/elixircastsio/002-adding-comments-with-ecto-has-many-and-belongs-to)
