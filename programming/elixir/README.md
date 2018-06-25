@@ -1,7 +1,7 @@
 # Elixir
 
-1. ## [Elixircasts](https://elixircasts.io/)
-#### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
+- ## [Elixircasts](https://elixircasts.io/)
+### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
 #### *Steps & Commands*
 
 >  generate a new phoenix project named ‘teacher’
@@ -64,9 +64,11 @@ $ mix phx.routes
 ```sh
 $ mix phx.routes | grep posts
 ```
-
-
-2. ## [Pragmatic Studio](https://online.pragmaticstudio.com/courses/elixir/)
-
-## Docs & Links
+#### Docs & Links
 [Phoenix Hexdocs](https://hexdocs.pm/phoenix/up_and_running.html)
+
+### [Ecto Associations](https://elixircasts.io/adding-comments-with-ecto-associations)
+#### *Steps & Commands*
+
+
+- ## [Pragmatic Studio](https://online.pragmaticstudio.com/courses/elixir/)
