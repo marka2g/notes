@@ -2,7 +2,7 @@
 
 ## [Elixircasts](https://elixircasts.io/)
 
-- ### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
+### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
 #### *Steps & Commands*
 
 >  generate a new phoenix project named ‘teacher’
@@ -51,7 +51,6 @@ scope “/“, Teacher do
 end
 ```
 
-
 > if all looks good, migrate the db:
 ```sh
 $ mix ecto.migrate
@@ -66,11 +65,13 @@ $ mix phx.routes
 $ mix phx.routes | grep posts
 ```
 #### *Docs & Links*
-[Phoenix Hexdocs](https://hexdocs.pm/phoenix/up_and_running.html)
+1. [Phoenix Hexdocs](https://hexdocs.pm/phoenix/up_and_running.html)
+2. [Episode Source Code](https://github.com/elixircastsio/001-getting-started-with-phoenix)
 
 
-- ### [Ecto Associations 02](https://elixircasts.io/adding-comments-with-ecto-associations)
+### [Ecto Associations 02](https://elixircasts.io/adding-comments-with-ecto-associations)
 #### *Steps & Commands*
+>  Add comments to posts.  A Post `has_many` comments
 
 
 ## [Pragmatic Studio](https://online.pragmaticstudio.com/courses/elixir/)
