@@ -196,7 +196,7 @@ end
   <%= submit "Submit", class: "btn btn-primary" %>
 <% end %>
 ```
-4.`web/templates/post/show.html.eex`
+4. `web/templates/post/show.html.eex`
 > display under posts
 ```eex
 <%= render Teacher.CommentView, "new.html",
@@ -204,6 +204,12 @@ end
                                 post: @post,
                                 comment_changeset: @comment_changeset %>
 ```
+5. `web/router.ex`
+> add the comments resource just below posts
+```elixir
+resources "/comments", CommentController
+```
+
 
 #### *Docs & Links*
 1. [Episode Source Code](https://github.com/elixircastsio/002-adding-comments-with-ecto-has-many-and-belongs-to)
