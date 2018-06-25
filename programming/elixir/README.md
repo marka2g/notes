@@ -209,6 +209,59 @@ end
 ```elixir
 resources "/comments", CommentController
 ```
+6. AMEND: `web/router.ex`
+>  since the comments have an association with posts, let's nest the comments route instead
+```elixir
+defmodule Teacher.Router do
+  # ...
+  resources "/posts", PostController do
+      resources "/comments", CommentController, only: [:create]
+  end
+  # ...
+end
+```
+if we go to the post in a browser, we'll get an error.  This is because we are calling the comment changeset in our comment form, but haven’t defined it. Let’s fix that.
+7. `web/controllers/post_controller.ex`
+> update the show function
+```elixir
+defmodule Teacher.PostController do
+  use Teacher.Web, :controller
+
+  alias Teacher.{Post, Comment}
+  ...
+  def show(conn, %{"id" => id}) do
+    post = Repo.get!(Post, id)
+    comment_changeset = Comment.changeset(%Comment{})
+    render(conn, "show.html", post: post, comment_changeset: comment_changeset)
+  end
+  ...
+end
+```
+8. `web/controllers/post_controller.ex`
+Now we need to preload comments display it below our post. `post = Repo.preload(post, :comments)`. also, use the '|>' operator to improve code readablility
+```elixir
+defmodule Teacher.PostController do
+  use Teacher.Web, :controller
+
+  alias Teacher.{Post, Comment}
+  # ...
+  def show(conn, %{"id" => id}) do
+    post = Post
+           |> Repo.get(id)
+           |> Repo.preload(:comments)
+    comment_changeset = Teacher.Comment.changeset(%Teacher.Comment{})
+    render(conn, "show.html", post: post, comment_changeset: comment_changeset)
+  end
+  # ...
+end
+```
+finally, we can update our our show template to display the comments using an elixir comprehension
+9. `web/templates/post/show.html.eex`
+```eex
+<%= for comment <- @post.comments do %>
+  <%= comment.body %>
+<% end %>
+```
 
 
 #### *Docs & Links*
