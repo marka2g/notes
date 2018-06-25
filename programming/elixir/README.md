@@ -1,7 +1,7 @@
 # Elixir
 
 1. ## [Elixircasts](https://elixircasts.io/)
-### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
+#### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
 #### *Steps & Commands*
 
 >  generate a new phoenix project named ‘teacher’
@@ -33,6 +33,7 @@ If all is good, you should see:
 ```sh
 $ mix phx.server
 ```
+*by default, cowboy server opens on `port 4000` [localhost:4000](http://localhost:4000)*
 
 > In situations where you want to generate a full HTML resource, phoenix provides a task to set everything up for you.
 ```sh
@@ -41,10 +42,29 @@ $ mix phoenix.gen.html Post posts title:string body:text
 
 Add the resource to `web/router.ex`:
 ```elixir
-resources "/posts", PostController
+scope “/“, Teacher do
+  pipe_through :browser
+
+  get “/“, PageController, :index
+  resources "/posts", PostController
+end
 ```
 
-*by default, cowboy server opens on `port 4000` [localhost:4000](http://localhost:4000)*
+
+> if all looks good, migrate the db:
+```sh
+$ mix ecto.migrate
+```
+
+> see the routes with this handy command:
+```sh
+$ mix phx.routes
+```
+*or grep thru them*
+```sh
+$ mix phx.routes | grep posts
+```
+
 
 2. ## [Pragmatic Studio](https://online.pragmaticstudio.com/courses/elixir/)
 
