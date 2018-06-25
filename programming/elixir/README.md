@@ -1,6 +1,6 @@
 # Elixir
 
-## [Elixircasts](https://elixircasts.io/)
+1. ## [Elixircasts](https://elixircasts.io/)
 ### [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
 #### *Steps & Commands*
 
@@ -45,6 +45,8 @@ resources "/posts", PostController
 ```
 
 *by default, cowboy server opens on `port 4000` [localhost:4000](http://localhost:4000)*
+
+2. ## [Pragmatic Studio](https://online.pragmaticstudio.com/courses/elixir/)
 
 ## Docs & Links
 [Phoenix Hexdocs](https://hexdocs.pm/phoenix/up_and_running.html)
