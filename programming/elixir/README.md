@@ -187,6 +187,7 @@ defmodule Teacher.CommentView do
 end
 ```
 3. `web/templates/comment/new.html.eex`
+>We’ll use the Phoenix form_for helper passing in our comment changeset and our action, which we’ll define in our routes later.
 ```eex
 <%= form_for @comment_changeset, post_comment_path(@conn, :create, @post), fn f -> %>
   <%= label f, :body, class: "control-label" %>
@@ -194,6 +195,14 @@ end
   <%= error_tag f, :body %>
   <%= submit "Submit", class: "btn btn-primary" %>
 <% end %>
+```
+4.`web/templates/post/show.html.eex`
+> display under posts
+```eex
+<%= render Teacher.CommentView, "new.html",
+                                conn: @conn,
+                                post: @post,
+                                comment_changeset: @comment_changeset %>
 ```
 
 #### *Docs & Links*
