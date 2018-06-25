@@ -123,8 +123,8 @@ defmodule Teacher.Repo.Migrations.CreateComment do
   def change do
     create table(:comments) do
       add :body, :text
+      # by default, its set to :nothing
       add :post_id, references(:posts, on_delete: :nothing)
-
       timestamps()
     end
 
@@ -149,6 +149,53 @@ defmodule Teacher.Repo.Migrations.CreateComment do
   end
 end
 ```
+> if all looks good, migrate the db:
+```sh
+$ mix ecto.migrate
+```
+
+> now, we need to add a form so people can add comments
+>> let's start by first adding a new CommentController.ex
+1. `web/controllers/comment_controller.ex`
+```elixir
+defmodule Teacher.CommentController do
+  use Teacher.Web, :controller
+
+  alias Teacher.Post
+
+  # it will take a connection and pattern match to get the comment_params and post_id
+  def create(conn, %{"comment" => comment_params, "post_id" => post_id}) do
+    # look up post with the post_id
+    post = Repo.get(Post, post_id)
+    # then, we'll build a comment_changeset which builds an assoc between comment and post and sets the value of the body key from the comment_params
+    comment_changeset = Ecto.build_assoc(post, :comments, body: comment_params["body"])
+
+    # insert into db
+    Repo.insert(comment_changeset)
+
+    # flash a message & then redirect to the post
+    conn
+    |> put_flash(:info, "Comment created successfully.")
+    |> redirect(to: post_path(conn, :show, post))
+  end
+end
+```
+2. `web/views/comment_view.ex`
+```elixir
+defmodule Teacher.CommentView do
+  use Teacher.Web, :view
+end
+```
+3. `web/templates/comment/new.html.eex`
+```text
+<%= form_for @comment_changeset, post_comment_path(@conn, :create, @post), fn f -> %>
+  <%= label f, :body, class: "control-label" %>
+  <%= text_input f, :body, class: "form-control" %>
+  <%= error_tag f, :body %>
+  <%= submit "Submit", class: "btn btn-primary" %>
+<% end %>
+```
+
 #### *Docs & Links*
 1. [Episode Source Code](https://github.com/elixircastsio/002-adding-comments-with-ecto-has-many-and-belongs-to)
 
