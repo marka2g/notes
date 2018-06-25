@@ -27,8 +27,8 @@ config :teacher, Teacher.Repo,
 ```sh
 $ mix ecto.create
 ```
-If all is good, you should see:
-`The database for Teacher.Repo has been created`
+> If all is good, you should see:
+>> `The database for Teacher.Repo has been created`
 
 > start the server with:
 ```sh
@@ -65,8 +65,9 @@ $ mix phx.routes
 ```sh
 $ mix phx.routes | grep posts
 ```
-#### Docs & Links
+#### *Docs & Links*
 [Phoenix Hexdocs](https://hexdocs.pm/phoenix/up_and_running.html)
+
 
 - ### [Ecto Associations 02](https://elixircasts.io/adding-comments-with-ecto-associations)
 #### *Steps & Commands*
