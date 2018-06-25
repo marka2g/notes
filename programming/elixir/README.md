@@ -113,7 +113,8 @@ defmodule Teacher.Post do
   ...
 end
 ```
-> In active record, the `dependent: :destroy` addition will take care of deleting all the posts comments.  To do this in Ecto, we change a setting in the migration from `on_delete: :nothing` to `on_delete: :delete_all`.
+In active record, the `dependent: :destroy` addition will take care of deleting all the posts comments.  To do this in Ecto, we change a setting in the migration from `on_delete: :nothing` to `on_delete: :delete_all`.
+
 > this:
 ```elixir
 defmodule Teacher.Repo.Migrations.CreateComment do
