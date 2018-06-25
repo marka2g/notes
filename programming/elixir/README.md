@@ -187,7 +187,7 @@ defmodule Teacher.CommentView do
 end
 ```
 3. `web/templates/comment/new.html.eex`
-```text
+```eex
 <%= form_for @comment_changeset, post_comment_path(@conn, :create, @post), fn f -> %>
   <%= label f, :body, class: "control-label" %>
   <%= text_input f, :body, class: "form-control" %>
