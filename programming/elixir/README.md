@@ -74,7 +74,7 @@ $ mix phx.routes | grep posts
 >  Add comments to posts.  A Post `has_many` comments
 
 >  Phoenix task to generate the model.
->> singular module name ‘Comment’, and the plural version ‘comments’ for the database table. Then a list of attributes for our comments. In this case we’ll want them to have a body that’s a text. And since comments will belong to a post, we’ll create a ‘post_id’ and reference posts. This will help setup our association.
+>> singular module name `Comment`, and the plural version `comments` for the database table. Then a list of attributes for our comments. In this case we’ll want them to have a body that’s a text. And since comments will belong to a post, we’ll create a `post_id` and reference posts. This will help setup our association.
 ```sh
 $ mix phoenix.gen.model Comment comments body:text post_id:references:posts
 ```
@@ -88,13 +88,9 @@ defmodule Teacher.Comment do
     field :body, :string
     # got this from generator
     belongs_to :post, Teacher.Post, foreign_key: :post_id
-
     timestamps()
   end
 
-  @doc """
-  Builds a changeset based on the `struct` and `params`.
-  """
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:body])
@@ -102,7 +98,7 @@ defmodule Teacher.Comment do
   end
 end
 ```
-* but we need to add the `has_many :comments` association to the schema of `Post`.
+*but we need to add the `has_many :comments` association to the schema of `Post`.*
 
 > add to `web/models/post.ex`
 ```elixir
@@ -117,7 +113,41 @@ defmodule Teacher.Post do
   ...
 end
 ```
+> In active record, the `dependent: :destroy` addition will take care of deleting all the posts comments.  To do this in Ecto, we change a setting in the migration from `on_delete: :nothing` to `on_delete: :delete_all`.
+> this:
+```elixir
+defmodule Teacher.Repo.Migrations.CreateComment do
+  use Ecto.Migration
 
+  def change do
+    create table(:comments) do
+      add :body, :text
+      add :post_id, references(:posts, on_delete: :nothing)
+
+      timestamps()
+    end
+
+    create index(:comments, [:post_id])
+  end
+end
+```
+> gets changed to this:
+```elixir
+defmodule Teacher.Repo.Migrations.CreateComment do
+  use Ecto.Migration
+
+  def change do
+    create table(:comments) do
+      add :body, :text
+      add :post_id, references(:posts, on_delete: :delete_all)
+
+      timestamps()
+    end
+
+    create index(:comments, [:post_id])
+  end
+end
+```
 #### *Docs & Links*
 1. [Episode Source Code](https://github.com/elixircastsio/002-adding-comments-with-ecto-has-many-and-belongs-to)
 
