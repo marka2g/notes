@@ -1,4 +1,4 @@
-# A Collection of Markdown Notes, Gists and Awesomeness
+# a collection of markdown notes, gists and awesomeness
 
 ## [elixir](elixir/README.md)
 ## [js](js/README.md)

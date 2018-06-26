@@ -1,4 +1,3 @@
-# Notes
-## A Collection of Notes In Markdown, Gists and Awesomeness
+# notes
 
-### [Programming](programming/README.md)
+### [programming](programming/README.md)

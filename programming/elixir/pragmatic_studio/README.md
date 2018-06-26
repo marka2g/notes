@@ -1,1 +1,1 @@
-# [Pragmatic Studio](https://online.pragmaticstudio.com/courses/elixir/)
+# [pragmatic studio - developing with elixir otp](https://online.pragmaticstudio.com/courses/elixir/)
