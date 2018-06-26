@@ -51,7 +51,7 @@
 #### thoughtbot elixir
 - [thoughtbot elixir for rubyists](https://robots.thoughtbot.com/elixir-for-rubyists)
 
-#### realworld meh
+#### realworld example meh
 - [example app elixir - meh](https://github.com/gothinkster/elixir-phoenix-realworld-example-app)
 
 ### *docs*
@@ -62,7 +62,7 @@
 - [plug api](https://hexdocs.pm/plug/readme.html)
 - [plug conn](https://hexdocs.pm/plug/Plug.Conn.html)
 - [ecto content](https://hexdocs.pm/phoenix/ecto.html#content)
-- [ecto api](https://hexdocs.pm/ecto/Ecto.html)
+- [ecto hex docs](https://hexdocs.pm/ecto/Ecto.html)
 
 #### elixir
 - [operators](https://hexdocs.pm/elixir/operators.html#content)
