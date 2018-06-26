@@ -210,6 +210,7 @@ end
 5. `web/router.ex`
 > add the comments resource just below posts
 ```elixir
+resources "/posts", PostController
 resources "/comments", CommentController
 ```
 6. AMEND: `web/router.ex`
