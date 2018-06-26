@@ -1,6 +1,6 @@
 # [Elixircasts](http://elixircasts.io)
 
-## [Getting Started with Phoenix 01 :rocket:](https://elixircasts.io/getting-started-with-phoenix)
+## [01 Getting Started with Phoenix :rocket:](https://elixircasts.io/getting-started-with-phoenix)
 ### *Steps & Commands*
 
 >  generate a new phoenix project named ‘teacher’
@@ -67,7 +67,7 @@ $ mix phx.routes | grep posts
 2. [Episode Source Code](https://github.com/elixircastsio/001-getting-started-with-phoenix)
 
 
-## [Ecto Associations 02 :family:](https://elixircasts.io/adding-comments-with-ecto-associations)
+## [02 Ecto Associations :family:](https://elixircasts.io/adding-comments-with-ecto-associations)
 ### *Steps & Commands*
 >  Add comments to posts.  A Post `has_many` comments
 
