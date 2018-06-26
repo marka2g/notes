@@ -9,14 +9,30 @@
 - [killer tips - from awesome elixir](https://github.com/blackode/elixir-tips)
 
 ### *on deck views & reads*
-#### cqrs
-- [cqrs with elixir phoenix!!!](https://jfcloutier.github.io/jekyll/update/2015/11/04/cqrs_elixir_phoenix.html)
-- [from darth vader and the death start(thoughtworks)](https://www.martinfowler.com/bliki/CQRS.html)
-- [enterprise patterns pdf](http://disi.unal.edu.co/dacursci/sistemasycomputacion/docs/SWEBOK/Systems%20Engineering%20-%20EAA%20-%20Patterns%20of%20Enterprise%20Application%20Architecture%20-%20Addison%20Wesley.pdf)
 #### chris m
 - [elixir macros - chris mccord](https://slides.com/chrismccord/elixir-macros#/1)
 - [and, well, chris mccord](https://github.com/chrismccord?tab=repositories)
 - [docyaaad repos](https://github.com/DockYard)
+#### ddd
+- [ddd](https://airbrake.io/blog/software-design/domain-driven-design)
+- [bounded context](https://www.martinfowler.com/bliki/BoundedContext.html)
+#### concurrency v parallelism
+- [what every node dev should know about elixir](https://www.youtube.com/watch?v=q8wueg2hswA&feature=youtu.be&t=37m4s)
+- [the burrito shop](http://nathanmlong.com/2017/06/concurrency-vs-paralellism/)
+#### cqrs
+- [cqrs with elixir phoenix!!!](https://jfcloutier.github.io/jekyll/update/2015/11/04/cqrs_elixir_phoenix.html)
+- [enterprise patterns pdf](http://disi.unal.edu.co/dacursci/sistemasycomputacion/docs/SWEBOK/Systems%20Engineering%20-%20EAA%20-%20Patterns%20of%20Enterprise%20Application%20Architecture%20-%20Addison%20Wesley.pdf)
+- [from darth vader and the death start(thoughtworks)](https://www.martinfowler.com/bliki/CQRS.html)
+  - [reporting db](https://www.martinfowler.com/bliki/ReportingDatabase.html)
+  - [polyglot persistence](https://www.martinfowler.com/bliki/PolyglotPersistence.html)
+#### phoenix umbrellas
+- [elixir umbrellas](https://elixir-lang.org/getting-started/mix-otp/dependencies-and-umbrella-projects.html)
+- [thoughtbot umbrellas](https://robots.thoughtbot.com/lessons-from-using-phoenix-1-3)
+- [chris mccord lonestar - umbrella start](https://youtu.be/tMO28ar0lW8?t=27m54s)
+- [getting to phoenix umbrella talk- luke imhoff](https://www.youtube.com/watch?v=1ocF_9Nc0ik)
+#### ecto
+- [ecto does not lazy load associations](https://hexdocs.pm/ecto/Ecto.html)
+- [elixir forum on ecto](https://elixirforum.com/t/ecto-general-discussion-blog-posts-wiki/383)
 #### phoenix 1.3 and apis
 - [build an api in phoenix 1.3](https://becoming-functional.com/building-a-rest-api-with-phoenix-1-3-part-1-9f8754aeaa87)
 - [phoenix 1.3 pure love](https://swanros.com/2017/03/03/phoenix-1-3-is-pure-love-for-api-development/)
