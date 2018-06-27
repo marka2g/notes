@@ -66,3 +66,8 @@
 
 #### elixir
 - [operators](https://hexdocs.pm/elixir/operators.html#content)
+
+#### basic design
+- [add bootstrap 4 to phoenix 1.3.3](http://candland.net/elixir/2018/02/04/sass_bootstrap_4_in_phoenix_1.3.html)
+- [how to use bootstrap 4 to phoenix 1.3](http://whatdidilearn.info/2018/02/11/how-to-use-bootstrap-4-with-phoenix.html)
+- [phoenix 1.3 bootstrap4 fontawesome](http://terrcin.io/2017/04/16/phoenix-1.3-with_bootstrap_4_and_font_awesome/)
