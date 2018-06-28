@@ -1,4 +1,9 @@
 # [elixir/otp](https://elixir-lang.org/docs.html)
+## Evan Miller on Erlang String Concatenation
+> "Or take string concatenation. If you pop open the implementation of string concatenation in Perl, Ruby, or JavaScript, you are certain to find an if statement, a realloc, and a memcpy. That is, when you concatenate two strings, the first string is grown to make room for the second, and then the second is copied into the first. This approach has worked for decades and is the “obvious” thing to do. Erlang's approach is non-obvious, and, I believe, correct. In the usual case, Erlang does not use a contiguous chunk of memory to represent a sequence of bytes. Instead, it something called an “I/O list” — a nested list of non-contiguous chunks of memory. The result is that concatenating two strings (I/O lists) takes O(1) time in Erlang, compared O(N) time in other languages. This is why template rendering in Ruby, Python, etc. is slow, but very fast in Erlang."
+
+[quote from](https://www.evanmiller.org/why-i-program-in-erlang.html)
+
 
 ## [elixircasts](elixircasts/README.md)
 ## [pragmatic studio - developing with elixir/otp](pragmatic_studio/README.md)
@@ -25,17 +30,28 @@
 - [from darth vader and the death start(thoughtworks)](https://www.martinfowler.com/bliki/CQRS.html)
   - [reporting db](https://www.martinfowler.com/bliki/ReportingDatabase.html)
   - [polyglot persistence](https://www.martinfowler.com/bliki/PolyglotPersistence.html)
-#### phoenix umbrellas
+
+#### phoenix umbrella apps
+- [sophie strikes again - elixir umbrella p1](https://www.thegreatcodeadventure.com/building-an-elixir-umbrella-app-part-1/)
+- [sophie strikes again - elixir umbrella p2](https://www.thegreatcodeadventure.com/building-an-elixir-umbrella-app-react-part-2/)
+- [sophie strikes again - elixir umbrella p3](https://www.thegreatcodeadventure.com/building-an-elixir-umbrella-app-part-3/)
 - [elixir umbrellas](https://elixir-lang.org/getting-started/mix-otp/dependencies-and-umbrella-projects.html)
 - [thoughtbot umbrellas](https://robots.thoughtbot.com/lessons-from-using-phoenix-1-3)
 - [chris mccord lonestar - umbrella start](https://youtu.be/tMO28ar0lW8?t=27m54s)
 - [getting to phoenix umbrella talk- luke imhoff](https://www.youtube.com/watch?v=1ocF_9Nc0ik)
+- [umbrella test setup](https://elixirforum.com/t/umbrella-app-routing-with-plug-router-app-phoenix-app/10213/8)
+- [set the port for each app differently](https://stackoverflow.com/questions/46479325/two-phoenix-apps-in-an-umbrella)
+- [jose valim fix 1.3](https://github.com/obmarg/request_pot/pull/8)
+- [hackernoon umbrella heroku deploy](https://hackernoon.com/deploying-a-phoenix-1-3-umbrella-app-to-heroku-452436b2b37f)
+
 #### ecto
 - [ecto does not lazy load associations](https://hexdocs.pm/ecto/Ecto.html)
 - [elixir forum on ecto](https://elixirforum.com/t/ecto-general-discussion-blog-posts-wiki/383)
+
 #### phoenix 1.3 and apis
 - [build an api in phoenix 1.3](https://becoming-functional.com/building-a-rest-api-with-phoenix-1-3-part-1-9f8754aeaa87)
 - [phoenix 1.3 pure love](https://swanros.com/2017/03/03/phoenix-1-3-is-pure-love-for-api-development/)
+
 #### elixircasts
 - [intro to genserver](https://elixircasts.io/intro-to-genserver)
 - [intro to agents](https://elixircasts.io/intro-to-agents)
@@ -68,6 +84,7 @@
 - [operators](https://hexdocs.pm/elixir/operators.html#content)
 
 #### basic design
+- [install b4 phoenix, a nice gist](https://gist.github.com/mbenatti/4866eaa5c424f66042e19cc055b21f83)
 - [add bootstrap 4 to phoenix 1.3.3](http://candland.net/elixir/2018/02/04/sass_bootstrap_4_in_phoenix_1.3.html)
 - [how to use bootstrap 4 to phoenix 1.3](http://whatdidilearn.info/2018/02/11/how-to-use-bootstrap-4-with-phoenix.html)
 - [phoenix 1.3 bootstrap4 fontawesome](http://terrcin.io/2017/04/16/phoenix-1.3-with_bootstrap_4_and_font_awesome/)

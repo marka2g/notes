@@ -17,6 +17,8 @@
   - [backend](https://boards.greenhouse.io/spokeo/jobs/80928)
   - [senior backend](https://boards.greenhouse.io/spokeo/jobs/33520)
 - [snip snap](https://www.snap.com/jobs/?locations=Los+Angeles&roles=Engineering)
+- [teachers pay teachers](https://www.teacherspayteachers.com/Careers)
+  - [teachers pay teachers sr soft eng](https://boards.greenhouse.io/teacherspayteachers/jobs/1109651)
 
 ##### *la market*
 - [built in la](https://www.builtinla.com/job/engineer/fullstack-engineer-mid-senior/22577)
