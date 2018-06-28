@@ -3,6 +3,14 @@
 > "...take string concatenation. If you pop open the implementation of string concatenation in Perl, Ruby, or JavaScript, you are certain to find an if statement, a `realloc`, and a `memcpy`. That is, when you concatenate two strings, the first string is grown to make room for the second, and then the second is copied into the first. This approach has worked for decades and is the “obvious” thing to do. Erlang's approach is non-obvious, and, I believe, correct. In the usual case, Erlang does not use a contiguous chunk of memory to represent a sequence of bytes. Instead, it something called an “I/O list” — a nested list of non-contiguous chunks of memory. The result is that concatenating two strings (I/O lists) takes `O(1)` time in Erlang, compared `O(N)` time in other languages. This is why template rendering in Ruby, Python, etc. is slow, but very fast in Erlang."
 [Evan Miller - Why I Program in Erlang](https://www.evanmiller.org/why-i-program-in-erlang.html)
 
+> for example, Views in Phoenix ~> 1.3.3 contain an IO List for performance:
+```elixir
+view = RumblWeb.UserView.render("user.html", user: user)
+#returns a tuple (:safe | IO List): {:safe, [[[[["" | "<strong>"] | "José"] | "</strong> ("] | "1"] | ")\n"]}
+Phoenix.HTML.safe_to_string(view)
+# then returns: "<strong>José</strong> (1)\n"
+```
+
 ## books
 - [programming phoenix](programming_phoenix/README.md)
 - [meta programming elixir](https://pragprog.com/book/cmelixir/metaprogramming-elixir)
@@ -21,12 +29,12 @@
 - [elixir macros - chris mccord](https://slides.com/chrismccord/elixir-macros#/1)
 - [and, well, chris mccord](https://github.com/chrismccord?tab=repositories)
 - [docyaaad repos](https://github.com/DockYard)
-### ddd
-- [ddd](https://airbrake.io/blog/software-design/domain-driven-design)
-- [bounded context](https://www.martinfowler.com/bliki/BoundedContext.html)
 ### concurrency v parallelism
 - [what every node dev should know about elixir](https://www.youtube.com/watch?v=q8wueg2hswA&feature=youtu.be&t=37m4s)
 - [the burrito shop](http://nathanmlong.com/2017/06/concurrency-vs-paralellism/)
+### ddd
+- [ddd](https://airbrake.io/blog/software-design/domain-driven-design)
+- [bounded context](https://www.martinfowler.com/bliki/BoundedContext.html)
 ### cqrs
 - [cqrs with elixir phoenix!!!](https://jfcloutier.github.io/jekyll/update/2015/11/04/cqrs_elixir_phoenix.html)
 - [enterprise patterns pdf](http://disi.unal.edu.co/dacursci/sistemasycomputacion/docs/SWEBOK/Systems%20Engineering%20-%20EAA%20-%20Patterns%20of%20Enterprise%20Application%20Architecture%20-%20Addison%20Wesley.pdf)
