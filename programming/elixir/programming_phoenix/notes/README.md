@@ -9,8 +9,11 @@ $ `phx.gen.json`
 > does the same for a REST-based API using JSON
 
 > generate the Multimedia context
+
 $ `mix phx.gen.html Multimedia Video videos user_id:references:users \
 url:string title:string description:text`
+
+...
 ```
 * creating lib/rumbl_web/controllers/video_controller.ex
 * creating lib/rumbl_web/templates/video/edit.html.eex
