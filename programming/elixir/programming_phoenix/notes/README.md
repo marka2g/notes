@@ -1,8 +1,8 @@
 ### ch 6 generators & relationships
-`phx.gen.html`
 > creates a simple HTTP scaffold with HTML pages, and
-`phx.gen.json`
+$ `phx.gen.html`
 > does the same for a REST-based API using JSON
+$ `phx.gen.json`
 
 > generate the Multimedia context
 $ `mix phx.gen.html Multimedia Video videos user_id:references:users \
