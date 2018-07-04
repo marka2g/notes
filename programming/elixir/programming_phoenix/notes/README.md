@@ -1,4 +1,4 @@
-### ch 6 generators & relationships
+### {}{}{}{}{}ch 6 generators & relationships{}{}{}{}{}
 
 $ `phx.gen.html`
 
@@ -34,8 +34,7 @@ $ `mix phx.gen.html Multimedia Video videos user_id:references:users \`
 
 $ `mix ecto.migrate`
 
-### {}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
-### ch 5 Authenticating Users.
+### {}{}{}{}{}ch 5 Authenticating Users{}{}{}{}{}
 
 need to rollback migration, how? can't in ecto
 $ `mix ecto.rollback`
