@@ -19,6 +19,12 @@
 - [snip snap](https://www.snap.com/jobs/?locations=Los+Angeles&roles=Engineering)
 - [teachers pay teachers](https://www.teacherspayteachers.com/Careers)
   - [teachers pay teachers sr soft eng](https://boards.greenhouse.io/teacherspayteachers/jobs/1109651)
+- [huli, i mean hulu](https://www.hulu.com/jobs/positions)
+  - [more on that](https://www.hulu.com/jobs/positions/ofb05fwf)
+
+
+##### *remote*
+  - [we work remotely](https://weworkremotely.com/remote-jobs/ifit-javascript-full-stack-developer-remote-or-on-site-1)
 
 ##### *la market*
 - [built in la](https://www.builtinla.com/job/engineer/fullstack-engineer-mid-senior/22577)

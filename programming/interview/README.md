@@ -11,3 +11,7 @@
 
 #### avant credit challenges
 - [avnt crdt challenge](https://github.com/marka2g/avantcredit_challenges)
+
+
+#### exercises
+- [java interview](https://github.com/crossoverJie/Java-Interview)
