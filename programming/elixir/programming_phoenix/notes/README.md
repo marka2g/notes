@@ -7,7 +7,6 @@ $ `mix phx.gen.schema Multimedia.Category categories name:string`
 migrate
 $ `mix ecto.migrate`
 
-
 ### {}{}{}{}{}ch 6 generators & relationships{}{}{}{}{}
 
 $ `phx.gen.html`

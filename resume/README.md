@@ -1,3 +1,10 @@
+## on deck
+[loomly job](https://angel.co/loomly/jobs/306840-full-time-senior-ruby-developer)
+[balcony](https://angel.co/balcony-1/jobs/221572-full-stack-engineer?src=rec)
+[true x](https://www.truex.com/about.html)
+[violet grey](https://www.violetgrey.com/careers/senior-web-developer)
+
+
 <!-- old -->
 <!-- http://www.r35um3.com/mark-sadegi -->
 <!-- r35um3.com  -->
@@ -21,7 +28,7 @@
   - [teachers pay teachers sr soft eng](https://boards.greenhouse.io/teacherspayteachers/jobs/1109651)
 - [huli, i mean hulu](https://www.hulu.com/jobs/positions)
   - [more on that](https://www.hulu.com/jobs/positions/ofb05fwf)
-
+- [elixir companies hiring](https://elixir-companies.com/hiring)
 
 ##### *remote*
   - [we work remotely](https://weworkremotely.com/remote-jobs/ifit-javascript-full-stack-developer-remote-or-on-site-1)
@@ -37,6 +44,16 @@
 - [tech jobs in la](https://techcrunch.com/2017/01/13/los-angeles-tech-companies-take-a-victory-lap-with-planned-tech-job-fair/)
 - [whos based in la?](https://www.quora.com/What-tech-companies-are-based-in-Los-Angeles)
 - [hireds take on it](https://hired.com/blog/highlights/top-10-companies-to-work-for-in-los-angeles/)
+
+#### cover letters
+[cover letter](https://www.thebalancecareers.com/software-developer-cover-letter-example-2060144)
+[monster](https://www.monster.com/career-advice/article/cover-letter-software-engineer)
+[job hero](http://www.jobhero.com/software-developer-cover-letter/)
+
+### consider gatsby over jekyll
+[using gatsby and netfly](https://blog.pavsidhu.com/how-i-built-my-blog-using-gatsby-and-netlify/)
+[gatsby](https://www.gatsbyjs.org/tutorial/)
+
 
 #### *my resume - wip*
 - [docs](https://docs.google.com/document/d/1fMgMk7TvKGx12kHPD9P4NV8-f4jMUrwOkN_020kUIq8/edit)

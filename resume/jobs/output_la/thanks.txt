@@ -1,0 +1,10 @@
+Dear Spencer,
+
+Thank you for the opportunity to meet with you and the team last Thursday. After learning more about the specific tools used and workflow at Output, I feel that my skill set and past experiences will successfully compliment the position and its requirements.
+
+I had some time this weekend to look into a few tools that your team is using to gain more perspective. Starting with the JUCE Framework on the client side, then Sequel in the backend as an Active Record replacement and also Amplitude for event and product analysis, I got a much better understanding of what you guys are trying to improve upon and accomplish.
+
+In addition to my qualifications and technical experience, I would bring raw grit and sound judgment to this position. I feel excited about the possibility of becoming a part of your team. Thank you again for your consideration. I look forward to hearing from you soon.
+
+Sincerely,
+Mark Sadegi

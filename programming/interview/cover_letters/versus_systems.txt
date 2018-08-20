@@ -1,5 +1,11 @@
 Battle Tested Dev
 
+- EMPEX == inspiration
+
+
+- took forcefield from subscription 0 to 18K+ users
+
+
 - can't express how excited i am ; u guys are the only people advertising that you took the plunge and started to drink the elixir.
 
   if my recent life expirience was a pipe function, it would go something like this...
@@ -10,6 +16,5 @@ Battle Tested Dev
     |>
 
   - most rails, maintaining a grape api(yuk).  then, things got more interesting... mdm -> needed to be rewritten and i suggested elixir.  turned out that our vanc dev loved elixir -> subsequently, i saw him popping up on the phoenix mailing lists along side jose' valim
-
 
 the only downside, in an effort to reduce the daily dumping of cortizol, i decided to move from venice to korea town.  ...bummer, apple sherlocked us.

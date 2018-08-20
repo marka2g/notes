@@ -3,6 +3,8 @@
 > "...take string concatenation. If you pop open the implementation of string concatenation in Perl, Ruby, or JavaScript, you are certain to find an if statement, a `realloc`, and a `memcpy`. That is, when you concatenate two strings, the first string is grown to make room for the second, and then the second is copied into the first. This approach has worked for decades and is the “obvious” thing to do. Erlang's approach is non-obvious, and, I believe, correct. In the usual case, Erlang does not use a contiguous chunk of memory to represent a sequence of bytes. Instead, it something called an “I/O list” — a nested list of non-contiguous chunks of memory. The result is that concatenating two strings (I/O lists) takes `O(1)` time in Erlang, compared `O(N)` time in other languages. This is why template rendering in Ruby, Python, etc. is slow, but very fast in Erlang."
 [Evan Miller - Why I Program in Erlang](https://www.evanmiller.org/why-i-program-in-erlang.html)
 
+[IO Lists in Elixir](https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/)
+[IO Lists in Phoenix](https://www.bignerdranch.com/blog/elixir-and-io-lists-part-2-io-lists-in-phoenix/)
 
 > for example, Views in Phoenix ~> 1.3.3 contain an IO List for performance:
 ```elixir
@@ -12,15 +14,46 @@ Phoenix.HTML.safe_to_string(view)
 # then returns: "<strong>José</strong> (1)\n"
 ```
 
-## books
+### elixir v. rails
+[when to choose elixir](https://www.amberbit.com/blog/2015/12/22/when-choose-elixir-over-ruby-for-2016-projects/)
+[evaluate rails json performance](https://robots.thoughtbot.com/how-to-evaluate-your-rails-json-api-for-performance-improvements)
+[terraform - incremental api](https://medium.com/@sugarpirate/rise-from-the-ashes-incremental-apis-with-phoenix-b08cd66bd142)
+
+#### interprocess communication - rails and elixir
+
+
+#### soa
+[wrap a rails api in phoenix](https://elixirforum.com/t/easiest-way-to-communicate-way-elixir-app-from-rails-from-project/1913/4)
+[amazon's philosophy - lessons learned](http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/)
+[this rails api odin project how-to talks about amazon(besos's) mandate](https://mixandgo.com/learn/what-you-need-to-know-when-working-with-external-apis-in-rails)
+[odin - building your own rails api](https://www.theodinproject.com/courses/ruby-on-rails/lessons/apis-and-building-your-own)
+[awesome rails apis -> not quite related](https://collectiveidea.com/blog/archives/2013/06/13/building-awesome-rails-apis-part-1)
+
+#### REST
+[REST APIs are not databases! Build APIs around user contexts](https://medium.com/@marinithiago/guys-rest-apis-are-not-databases-60db4e1120e4)
+
+
+### example apps
+[10 amazing elixir examples](https://medium.com/aviabird/10-amazing-open-source-elixir-phoenix-apps-e2c52ee25053)
+
+[learning elixir - good examples a bit old tho - joseph kain](http://learningelixir.joekain.com/elixir-application-design-posts/)
+
+### rails puma v elixir puma showdown
+[puma v cowboy](https://littlelines.com/blog/2014/07/08/elixir-vs-ruby-showdown-phoenix-vs-rails)
+
+### elixir conf 2017
+[all videos](https://www.youtube.com/channel/UC0l2QTnO1P2iph-86HHilMQ/videos)
+[erlang solutions - has elixir 2018 videos too](https://www.youtube.com/user/ErlangSolutions/videos)
+
+### books
 - [programming phoenix](programming_phoenix/README.md)
 - [meta programming elixir](https://pragprog.com/book/cmelixir/metaprogramming-elixir)
 
-## courses
+### courses
 - [elixircasts - notes](elixircasts/README.md)
 - [pragmatic studio - developing with elixir/otp - notes](pragmatic_studio/README.md)
 
-## *views & reads*
+### *views & reads*
 - [i really don't care, do u? - chris mccords lonestar elixir_conf 2017 keynote](https://www.youtube.com/watch?v=tMO28ar0lW8)
 - [ex_debug_toolbar github](https://github.com/kagux/ex_debug_toolbar)
 - [killer tips - from awesome elixir](https://github.com/blackode/elixir-tips)
@@ -93,10 +126,34 @@ Phoenix.HTML.safe_to_string(view)
 - [ecto hex docs](https://hexdocs.pm/ecto/Ecto.html)
 
 ### elixir
+- [getting started](https://elixir-lang.org/getting-started/introduction.html)
+- [elixir school](https://elixirschool.com/en/)
 - [operators](https://hexdocs.pm/elixir/operators.html#content)
+- [learn x in y minutes](https://learnxinyminutes.com/docs/elixir/)
+  - [learn u some erlang for great good](https://learnyousomeerlang.com/content)
+  - [elixir cheat sheet](https://media.pragprog.com/titles/elixir/ElixirCheat.pdf)
+-[mix commands](https://hexdocs.pm/phoenix/phoenix_mix_tasks.html#content)
 
 ### basic design
 - [install b4 phoenix, a nice gist](https://gist.github.com/mbenatti/4866eaa5c424f66042e19cc055b21f83)
 - [add bootstrap 4 to phoenix 1.3.3](http://candland.net/elixir/2018/02/04/sass_bootstrap_4_in_phoenix_1.3.html)
 - [how to use bootstrap 4 to phoenix 1.3](http://whatdidilearn.info/2018/02/11/how-to-use-bootstrap-4-with-phoenix.html)
 - [phoenix 1.3 bootstrap4 fontawesome](http://terrcin.io/2017/04/16/phoenix-1.3-with_bootstrap_4_and_font_awesome/)
+- [phoenix 1.1.4 CRUD API and jwt auth](https://medium.com/@njwest/jwt-auth-with-an-elixir-on-phoenix-1-3-guardian-api-and-react-native-mobile-app-1bd00559ea51)
+- [phoenix 1.1.4 CRUD API and vue - current](https://lobotuerto.com/blog/building-a-json-api-with-phoenix-and-elixir/)
+
+### recursion and elixir
+[recursion elixir](http://www.schmitty.me/phoenix-plug-and-sessions/)
+[30 days of elixir](https://github.com/seven1m/30-days-of-elixir)
+[tail call recursion in elixir](https://www.culttt.com/2016/06/06/understanding-recursion-tail-call-optimisation-elixir/)
+[thinking recursively](http://langintro.com/elixir/article2/)
+
+### Plug and Shopping Cart
+[plug shopping cart example](http://www.schmitty.me/phoenix-plug-and-sessions/)
+
+### blockchain
+[building a blockchain in elixir](https://sheharyar.me/blog/writing-blockchain-elixir/)
+
+### rideshare app example - otp
+[montreal elixir ride share clone talk with josh nuss](https://www.youtube.com/watch?v=Hy1G2wz7DKI)
+[montreal elixir talk code example with josh nuss](https://github.com/joshnuss/otp-talk)
